@@ -2,7 +2,6 @@ import React, { useState, Fragment } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -15,15 +14,19 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PersonIcon from '@mui/icons-material/Person';
 import Dialog from '@mui/material/Dialog';
-import { TransitionProps } from '@mui/material/transitions';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import HeaderBasic from '~/components/Header/Basic';
+import ParallaxBall from '~/components/Decoration/ParallaxBall';
+import ParallaxDouble from '~/components/Decoration/ParallaxDouble';
+import Line from '~/components/Decoration/Line';
+import ProductCard from '~/components/Cards/ProductCard';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import Logo from '~/components/Logo';
+import imgAPI from '~/public/images/imgAPI';
 import { useTextAlign, useText } from '~/theme/common';
 import useStyles from '~/theme/mobile-demo-style';
 import brand from '~/public/text/brand';
@@ -32,10 +35,10 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const productLink = 'https://codecanyon.net/item/boxperia-flutter-hotel-and-room-booking-app-ui-kit/59109506';
+const productLink = 'https://codecanyon.net/user/ilhammeidi/portfolio';
 const apkLink = 'https://drive.google.com/drive/folders/106zzxbtjg90y5jXqdGEqwcPiHUXFIMgU?usp=sharing';
 const githubLink = 'https://github.com/ilhammeidi/boxperia-starter';
-const onlineDocsLink = 'https://ilhammeidi.github.io/boxperia-docs/';
+const onlineDocsLink = 'https://ilhammeidi.github.io/verslion-docs/flutter-doc/index.html';
 const appFrame = 'https://bungalion-app.vercel.app/';
 
 function MoreAbout() {
@@ -151,6 +154,13 @@ function LandingPage() {
         </Box>
       </Dialog>
       <div className={classes.fullScreenContainer}>
+        {isDesktop && (
+          <Fragment>
+            <ParallaxDouble />
+            <Line />
+            <ParallaxBall />
+          </Fragment>
+        )}
         <Grid container spacing={0} justifyContent="center">
           {isDesktop && (
             <Grid item lg={3} xs={12}>
@@ -186,13 +196,39 @@ function LandingPage() {
                   target="_blank"
                   size="large"
                   variant="outlined"
-                  color="white"
+                  color="primaryLight"
                 >
                   <FullscreenIcon />
                   &nbsp;
                   Show Full Screen
                 </Button>
               </div>
+
+              <Box mt={5}>
+                <h3 className={cx(text.subtitle, align.textCenter)}>
+                  More Products
+                </h3>
+                <br />
+                <ProductCard
+                  price={15}
+                  img="https://s3.envato.com/files/644359635/logo80.jpg"
+                  title="Boxperia"
+                  desc="Flutter Hotel and Room Booking App Template"
+                  orientation="landscape"
+                  type="over"
+                  href="https://codecanyon.net/item/boxperia-flutter-hotel-and-room-booking-app-ui-kit/59109506"
+                />
+                <br />
+                <ProductCard
+                  price={15}
+                  img="https://s3.envato.com/files/633666758/logo80.jpg"
+                  title="BookMyTix"
+                  desc="Flutter Flight Booking App Template"
+                  orientation="landscape"
+                  type="over"
+                  href="https://codecanyon.net/item/bookmytix-flutter-flight-booking-app-template/57827751"
+                />
+              </Box>
             </Grid>
           )}
         </Grid>

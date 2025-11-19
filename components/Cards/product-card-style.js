@@ -26,7 +26,10 @@ const useStyles = makeStyles({ uniqId: 'product_card' })((theme, _params, classe
   },
   desc: {
     padding: theme.spacing(2, 3),
-    overflow: 'hidden'
+    overflow: 'hidden',
+    '& p': {
+      fontSize: 14
+    }
   },
   property: {
     display: 'flex',
@@ -38,7 +41,6 @@ const useStyles = makeStyles({ uniqId: 'product_card' })((theme, _params, classe
     }
   },
   text: {
-    padding: 0,
     [theme.breakpoints.up('sm')]: {
       marginRight: theme.spacing(2),
     }
@@ -77,12 +79,9 @@ const useStyles = makeStyles({ uniqId: 'product_card' })((theme, _params, classe
   },
   landscape: {
     display: 'flex',
-    [theme.breakpoints.up('sm')]: {
-      height: 150
-    },
     '& figure': {
-      width: 200,
-      height: 150
+      width: 80,
+      height: 80
     },
     [`& .${classes.desc}`]: {
       [theme.breakpoints.up('sm')]: {
@@ -108,9 +107,7 @@ const useStyles = makeStyles({ uniqId: 'product_card' })((theme, _params, classe
       }
     },
     [`& .${classes.hiddenLink}`]: {
-      [theme.breakpoints.down('sm')]: {
-        display: 'block',
-      }
+      display: 'block',
     }
   },
   /* Type */
@@ -183,8 +180,8 @@ const useStyles = makeStyles({ uniqId: 'product_card' })((theme, _params, classe
       marginLeft: theme.spacing(2),
       '& figure': {
         margin: theme.spacing(2, 0),
-        height: 118,
-        width: 140,
+        height: 80,
+        width: 80,
         left: theme.spacing(-2),
         marginRight: theme.spacing(-2),
       }

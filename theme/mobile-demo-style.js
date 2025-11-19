@@ -6,7 +6,7 @@ const useStyles = makeStyles({ uniqId: 'mobile' })((theme, _params, classes) => 
     position: 'relative',
     display: 'block',
     height: 50,
-    background: theme.palette.secondary.light
+    background: theme.palette.primary.dark
   },
   link: {
     color: theme.palette.secondary.main
@@ -35,7 +35,7 @@ const useStyles = makeStyles({ uniqId: 'mobile' })((theme, _params, classes) => 
     },
     [theme.breakpoints.up('lg')]: {
       padding: theme.spacing(2),
-      background: '#222222',
+      background: '#000',
       borderRadius: 40,
       boxShadow: theme.shadows[10],
       width: 430 + 16 * 2,

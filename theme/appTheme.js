@@ -34,7 +34,7 @@ const appTheme = (color, mode) => ({
       hoverOpacity: 0.05
     },
     background: {
-      paper: mode === 'dark' ? '#424242' : '#FFFFFF',
+      paper: mode === 'dark' ? '#191919' : '#FFFFFF',
       default: mode === 'dark' ? '#303030' : '#fafafa',
     },
   },

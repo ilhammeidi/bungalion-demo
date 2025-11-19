@@ -27,7 +27,7 @@ function ProductCard(props) {
 
   return (
     <Card className={cx(classes.cardProduct, classes[orientation], classes[type])}>
-      <ButtonBase focusRipple href={href} className={classes.hiddenLink}>&nbsp;</ButtonBase>
+      <ButtonBase focusRipple href={href} target="_blank" className={classes.hiddenLink}>&nbsp;</ButtonBase>
       <CardMedia
         className={classes.mediaProduct}
         image={img}
@@ -35,37 +35,13 @@ function ProductCard(props) {
         component="figure"
       />
       <div className={classes.desc}>
-        <CardContent className={classes.text}>
+        <div className={classes.text}>
           <Typography noWrap gutterBottom variant="h6" className={classes.title} component="h2">
             {title}
           </Typography>
           <Typography component="p">
             {desc}
           </Typography>
-        </CardContent>
-        <div>
-          <CardActions className={classes.property}>
-            {rating > 0 ? (
-              <div className={classes.rating}>
-                <Rating value={rating} readOnly />
-              </div>
-            ) : ''}
-            {price > 0 && (
-              <strong>
-                $
-                {price}
-              </strong>
-            )}
-          </CardActions>
-          <Button
-            fullWidth
-            href={href}
-            className={classes.button}
-            variant="outlined"
-            color="primary"
-          >
-            {t('btn_detail')}
-          </Button>
         </div>
       </div>
     </Card>
