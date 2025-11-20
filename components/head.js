@@ -29,7 +29,7 @@ const HeadComponent = () => (
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
     {/* PWA primary color */}
-    <meta name="theme-color" content={theme.bookmytix.palette.primary.main} />
+    <meta name="theme-color" content={theme.cyber.palette.primary.dark} />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap"

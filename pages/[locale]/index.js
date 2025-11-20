@@ -26,7 +26,6 @@ import Line from '~/components/Decoration/Line';
 import ProductCard from '~/components/Cards/ProductCard';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import Logo from '~/components/Logo';
-import imgAPI from '~/public/images/imgAPI';
 import { useTextAlign, useText } from '~/theme/common';
 import useStyles from '~/theme/mobile-demo-style';
 import brand from '~/public/text/brand';
@@ -36,8 +35,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const productLink = 'https://codecanyon.net/user/ilhammeidi/portfolio';
-const apkLink = 'https://drive.google.com/drive/folders/106zzxbtjg90y5jXqdGEqwcPiHUXFIMgU?usp=sharing';
-const githubLink = 'https://github.com/ilhammeidi/boxperia-starter';
+const apkLink = 'https://drive.google.com/drive/folders/14TVk1LsnVijYqbcvvKjPJh_QauqbVkR5?usp=sharing';
+const githubLink = 'https://github.com/ilhammeidi/bungalion-wallet-starter';
 const onlineDocsLink = 'https://ilhammeidi.github.io/verslion-docs/flutter-doc/index.html';
 const appFrame = 'https://bungalion-app.vercel.app/';
 
@@ -181,7 +180,7 @@ function LandingPage() {
           {isDesktop && (
             <Grid item lg={3} xs={12}>
               <div className={classes.optZoom}>
-                <h3 className={text.subtitle}>
+                <h3 className={text.subtitle2}>
                   Zoom Options
                 </h3>
                 <ButtonGroup size="large" aria-label="Large button group">
@@ -205,7 +204,7 @@ function LandingPage() {
               </div>
 
               <Box mt={5}>
-                <h3 className={cx(text.subtitle, align.textCenter)}>
+                <h3 className={cx(text.subtitle2, align.textCenter)}>
                   More Products
                 </h3>
                 <br />

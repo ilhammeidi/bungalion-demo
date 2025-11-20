@@ -12,8 +12,6 @@ const useStyles = makeStyles({ uniqId: 'logo' })(theme => ({
   },
   landscape: {
     alignItems: 'center',
-    position: 'relative',
-    top: -2,
     '& img': {
       marginRight: theme.spacing(1)
     }

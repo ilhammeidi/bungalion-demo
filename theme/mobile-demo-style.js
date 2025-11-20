@@ -14,13 +14,15 @@ const useStyles = makeStyles({ uniqId: 'mobile' })((theme, _params, classes) => 
   fullScreenContainer: {
     background: theme.palette.mode === 'dark' ? darken(theme.palette.primary.dark, 0.5) : theme.palette.background.paper,
     [theme.breakpoints.up('lg')]: {
-      // background: 'url(/images/decoration/bg_demo.svg)',
       backgroundSize: 'cover',
     }
   },
   phoneWrap: {
     height: '100vh',
     overflow: 'auto',
+    '&::-webkit-scrollbar': {
+      display: 'none'
+    },
     [theme.breakpoints.down('lg')]: {
       height: 'calc(100vh - 120px)',
       overflow: 'hidden'

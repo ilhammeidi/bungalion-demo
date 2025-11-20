@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Rating from '@mui/material/Rating';
 import ButtonBase from '@mui/material/ButtonBase';
 import { useTranslation } from 'next-i18next';
 import useStyles from './product-card-style';
@@ -19,8 +15,6 @@ function ProductCard(props) {
     desc,
     orientation,
     type,
-    rating,
-    price,
     href,
   } = props;
   const { t } = useTranslation('common');
@@ -36,7 +30,7 @@ function ProductCard(props) {
       />
       <div className={classes.desc}>
         <div className={classes.text}>
-          <Typography noWrap gutterBottom variant="h6" className={classes.title} component="h2">
+          <Typography noWrap variant="h6" className={classes.title} component="h2">
             {title}
           </Typography>
           <Typography component="p">
